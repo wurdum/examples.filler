@@ -1,0 +1,9 @@
+﻿@model Examples.Filler.ViewModels.CountryViewModel
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post)) {
+    <div>@Html.ValidationSummary()</div>
+    
+    <p>@Html.DropDownListFor(m => m.CountryId, Model.GetCountries())</p>
+    
+    <button type="submit">Save</button>
+}
